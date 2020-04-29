@@ -7,11 +7,15 @@ body{
 i{
 	color: #54acc4;
 }
+a{	
+	color: white;
+	text-decoration: none;
+}
 
 .showcase::after{
 	content: '';
 	height: 100vh;
-	width: 100%;
+	max-width: 100%;
 	background-image: url(../img/fondo.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -48,14 +52,11 @@ i{
 
 
 .content .title{
-	width: 100%;
+	 width: 100%;
 	 font-size: 3.5rem;
 	 margin-top: 1rem;
 }
-.content .text{
-	line-height: 1.7;
-	margin-top: 7rem;
-}
+
 
 .container{
 	max-width: 960px;
@@ -93,23 +94,33 @@ footer p{
 }
 
 /*Small Screen*/
+body{
+	overflow-x: hidden;
+}
 @media (max-width: 560px) {
   .showcase::after {
-    height: 50vh;
+    height: 100vh;
+ 	
   }
 
   .content {
     top: 5%;
     margin-top: 5px;
+    width: 50%;
+     
+  }
+  .content .title {
+  	margin-top: 40%;
+  	margin-left: 10%;
+  	width: 70vw;
+  	
   }
 
 
-  .content .text {
-    display: none;
-  }
 
   .grid-3,
   .grid-2 {
+  	grid-gap: 10px;
     grid-template-columns: 1fr;
   }
 
