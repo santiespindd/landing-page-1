@@ -93,34 +93,28 @@ footer p{
 	margin: 0;
 }
 
-/*Small Screen*/
-body{
-	overflow-x: hidden;
-}
+/* Small Screens */
 @media (max-width: 560px) {
   .showcase::after {
-    height: 100vh;
- 	
+    height: 50vh;
   }
 
   .content {
     top: 5%;
     margin-top: 5px;
-    width: 50%;
-     
-  }
-  .content .title {
-  	margin-top: 40%;
-  	margin-left: 10%;
-  	width: 70vw;
-  	
   }
 
+  .content .logo {
+    height: 140px;
+    width: 140px;
+  }
 
+  .content .text {
+    display: none;
+  }
 
   .grid-3,
   .grid-2 {
-  	grid-gap: 10px;
     grid-template-columns: 1fr;
   }
 
@@ -132,8 +126,12 @@ body{
 
 /* Landscape */
 @media (max-height: 500px) {
+  .content .title,
+  .content .text {
+    display: none;
+  }
 
   .content {
     top: 0;
-  
+  }
 }
